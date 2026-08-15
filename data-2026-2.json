@@ -1,0 +1,83 @@
+{
+  "coordinacion": {
+    "titulo": "Coordinación de Cursos",
+    "subtitulo": "Lengua · Redacción · Oratoria",
+    "unidad": "Cursos Básicos / Humanidades",
+    "universidad": "Universidad Científica del Sur",
+    "ciclo": "2026-2",
+    "coordinador": "Bruno Alcántara Rojas"
+  },
+  "semanaActual": 1,
+  "cursos": [
+    {
+      "id": "lyc",
+      "nombre": "Lengua y Comunicación",
+      "codigo": "HUM-104",
+      "color": "#1E3A5F",
+      "rc": "José Oruna",
+      "carpeta": {
+        "nombre": "Carpeta LyC",
+        "url": "https://n9.cl/98q5fv"
+      }
+    },
+    {
+      "id": "lyc2",
+      "nombre": "Lengua y Comunicación 2",
+      "codigo": "HUM-105",
+      "color": "#7A2020",
+      "rc": "Maritza Mestanza",
+      "carpeta": {
+        "nombre": "Carpeta LyC2",
+        "url": "https://n9.cl/luf94y"
+      }
+    },
+    {
+      "id": "rg",
+      "nombre": "Redacción General",
+      "codigo": "HUM-101",
+      "color": "#5C3D6E",
+      "rc": "Vanessa Vera",
+      "carpeta": {
+        "nombre": "Carpeta RG",
+        "url": "https://n9.cl/8s17w4"
+      }
+    },
+    {
+      "id": "lyo",
+      "nombre": "Lengua y Oratoria",
+      "codigo": "HUM-106",
+      "color": "#1A1A1A",
+      "rc": "José Mori",
+      "carpeta": {
+        "nombre": "Carpeta LyO",
+        "url": "https://n9.cl/8kmwh"
+      }
+    },
+    {
+      "id": "crc",
+      "nombre": "Comunicación y Redacción Científica",
+      "codigo": "CPE",
+      "color": "#1A5276",
+      "rc": "César Olivares",
+      "esCPE": true,
+      "carpeta": {
+        "nombre": "Carpeta CRC",
+        "url": "https://n9.cl/wwqdu"
+      }
+    }
+  ],
+  "semanas": [
+    {
+      "numero": 1,
+      "fechaPublicacion": "2026-08-17",
+      "recomendaciones": "Estimadas y estimados colegas, les doy la bienvenida al ciclo 2026-2 a nombre de nuestra institución. Nuestra principal labor es lograr la excelencia académica y ética en nuestros estudiantes. Por ello, los insto a cumplir con ello por medio de una comunicación efectiva, el uso de sus habilidades blandas y la responsabilidad ya reconocida en ustedes. Les deseo lo mejor para este nuevo semestre.\n\nRecuerden que para CPE — Comunicación y Redacción Científica, cada módulo concluye en 8 semanas.",
+      "cursos": {
+        "lyc": { "indicaciones": ["Indicaciones de semana 1 próximamente."] },
+        "lyc2": { "indicaciones": ["Indicaciones de semana 1 próximamente."] },
+        "rg": { "indicaciones": ["Indicaciones de semana 1 próximamente."] },
+        "lyo": { "indicaciones": ["Indicaciones de semana 1 próximamente."] },
+        "crc": { "indicaciones": ["Módulo 1 — Semana 1. Indicaciones próximamente."] }
+      }
+    }
+  ]
+}

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coordinación de Cursos — UCSur 2026-2</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --azul: #2471A3;
+    --azul-claro: #5DADE2;
+    --azul-suave: #EBF5FB;
+    --naranja: #E67E22;
+    --naranja-suave: #FDEBD0;
+    --bg: #F8F9FA;
+    --surface: #FFFFFF;
+    --text: #1C2833;
+    --muted: #7F8C8D;
+    --border: #E8EAED;
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); font-weight: 300; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    border-top: 4px solid var(--azul);
+  }
+
+  .header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .header-title {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--azul);
+    letter-spacing: 0.02em;
+  }
+
+  .header-sub {
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .ciclo-tag {
+    background: var(--azul);
+    color: white;
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 5px 14px;
+    border-radius: 20px;
+  }
+
+  .header-fecha {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  /* ── HERO ── */
+  .hero-strip {
+    background: var(--azul-suave);
+    border-bottom: 1px solid #D6EAF8;
+    padding: 32px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .hero-titulo {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--azul);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-titulo span {
+    color: var(--naranja);
+  }
+
+  .hero-meta {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    margin-top: 6px;
+  }
+
+  .semana-actual-badge {
+    background: var(--azul);
+    color: white;
+    border-radius: 12px;
+    padding: 16px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .semana-numero {
+    font-family: var(--font-display);
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .semana-label {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  /* ── NAV ── */
+  .semanas-nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 60px;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .semana-tab {
+    padding: 14px 18px;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: var(--font-display);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: all 0.15s;
+  }
+
+  .semana-tab:hover { color: var(--azul); }
+  .semana-tab.activa { color: var(--azul); border-bottom-color: var(--naranja); }
+  .semana-tab.historial { opacity: 0.5; }
+
+  /* ── MAIN ── */
+  main { padding: 40px 60px; max-width: 1140px; margin: 0 auto; }
+
+  /* ── RECOMENDACIONES ── */
+  .rec-bloque {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--naranja);
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin-bottom: 36px;
+  }
+
+  .rec-label {
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--naranja);
+    margin-bottom: 12px;
+  }
+
+  .rec-texto {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .rec-texto p { margin-bottom: 8px; }
+  .rec-texto p:last-child { margin-bottom: 0; }
+  .rec-texto ul { margin: 8px 0 8px 20px; }
+  .rec-texto li { margin-bottom: 4px; }
+  .rec-texto a { color: var(--azul); text-underline-offset: 3px; }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  /* ── CPE AVISO ── */
+  .cpe-aviso {
+    background: var(--naranja-suave);
+    border: 1px solid #FAD7A0;
+    border-left: 4px solid var(--naranja);
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #784212;
+    margin-bottom: 28px;
+  }
+
+  /* ── GRID ── */
+  .cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 18px;
+  }
+
+  /* ── CARD ── */
+  .curso-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .curso-card:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+    transform: translateY(-2px);
+  }
+
+  .card-accent { height: 4px; }
+
+  .card-header {
+    padding: 18px 20px 14px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .card-title {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--text);
+  }
+
+  .card-rc {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 3px;
+    font-weight: 300;
+  }
+
+  .card-badges { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; }
+
+  .card-code {
+    font-size: 10px;
+    font-weight: 600;
+    font-family: var(--font-display);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 20px;
+  }
+
+  .card-cpe-badge {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--naranja-suave);
+    color: var(--naranja);
+    border: 1px solid #FAD7A0;
+    padding: 2px 7px;
+    border-radius: 20px;
+  }
+
+  .card-body { padding: 18px 20px; }
+  .card-section { margin-bottom: 16px; }
+  .card-section:last-child { margin-bottom: 0; }
+
+  .card-section-label {
+    font-family: var(--font-display);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .semana-pill {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+
+  .ind-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--text);
+  }
+
+  .ind-item:last-child { border-bottom: none; }
+  .ind-marker { width: 5px; height: 5px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; background: var(--muted); }
+  .ind-item a { color: var(--azul); text-underline-offset: 3px; }
+
+  /* ── CARPETA ── */
+  .carpeta-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 400;
+    transition: background 0.15s, border-color 0.15s;
+  }
+
+  .carpeta-link:hover { background: var(--bg); border-color: var(--azul-claro); }
+
+  .carpeta-icon {
+    width: 32px; height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .carpeta-icon svg { width: 16px; height: 16px; }
+  .carpeta-arrow { margin-left: auto; color: var(--muted); opacity: 0.5; font-size: 14px; }
+
+  /* ── HISTORIAL ── */
+  .historial-badge {
+    display: inline-flex;
+    align-items: center;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  .vacio { text-align: center; padding: 60px 20px; color: var(--muted); font-size: 14px; }
+
+  /* ── FOOTER ── */
+  footer {
+    margin-top: 60px;
+    padding: 22px 60px;
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-lema {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--azul);
+    letter-spacing: 0.02em;
+  }
+
+  .footer-right { font-size: 11px; color: var(--muted); letter-spacing: 0.06em; }
+
+  @media (max-width: 700px) {
+    header, .hero-strip, main, footer, .semanas-nav { padding-left: 20px; padding-right: 20px; }
+    .hero-titulo { font-size: 22px; }
+    .semana-numero { font-size: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <div class="header-title">Coordinación de Cursos · Lengua e Inglés</div>
+    <div class="header-sub">Cursos Básicos / Humanidades · Universidad Científica del Sur</div>
+  </div>
+  <div class="header-right">
+    <div class="ciclo-tag" id="ciclo-tag"></div>
+    <div class="header-fecha" id="header-fecha"></div>
+  </div>
+</header>
+
+<div class="hero-strip">
+  <div>
+    <div class="hero-titulo">Panel docente — <span>Lengua, Redacción y Oratoria</span></div>
+    <div class="hero-meta" id="hero-meta"></div>
+  </div>
+  <div class="semana-actual-badge">
+    <div class="semana-numero" id="semana-numero">—</div>
+    <div class="semana-label">Semana actual</div>
+  </div>
+</div>
+
+<nav class="semanas-nav" id="semanas-nav"></nav>
+
+<main>
+  <div id="rec-bloque" class="rec-bloque" style="display:none;">
+    <div class="rec-label">Recomendaciones del coordinador · Bruno Alcántara</div>
+    <div class="rec-texto" id="rec-texto"></div>
+  </div>
+
+  <div id="cpe-aviso" class="cpe-aviso" style="display:none;">
+    📌 CPE — Comunicación y Redacción Científica se desarrolla en módulos de 8 semanas. Módulo 1: semanas 1–8 · Módulo 2: semanas 9–16.
+  </div>
+
+  <div class="section-label" id="section-label">Cursos activos</div>
+  <div id="historial-badge" style="display:none;"><div class="historial-badge">Historial</div></div>
+  <div class="cursos-grid" id="cursos-grid"></div>
+</main>
+
+<footer>
+  <div class="footer-lema">Juntos formamos personas que van a cambiar el mundo.</div>
+  <div class="footer-right" id="footer-right"></div>
+</footer>
+
+<script>
+  let DATA = null, semanaActiva = null;
+
+  function hexToRgba(hex, alpha) {
+    const r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    return `rgba(${r},${g},${b},${alpha})`;
+  }
+
+  function formatFecha(f) {
+    const meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+    const [y,m,d] = f.split('-').map(Number);
+    return `${d} de ${meses[m-1]} de ${y}`;
+  }
+
+  function linkify(text) {
+    return text.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank">$1</a>');
+  }
+
+  function formatRec(text) {
+    const lines = text.split('\n');
+    let html = '', inList = false;
+    lines.forEach(line => {
+      if (line.startsWith('- ')) {
+        if (!inList) { html += '<ul>'; inList = true; }
+        html += `<li>${linkify(line.slice(2))}</li>`;
+      } else {
+        if (inList) { html += '</ul>'; inList = false; }
+        if (line.trim()) html += `<p>${linkify(line)}</p>`;
+      }
+    });
+    if (inList) html += '</ul>';
+    return html;
+  }
+
+  function renderNav() {
+    const nav = document.getElementById('semanas-nav');
+    nav.innerHTML = '';
+    [...DATA.semanas].sort((a,b) => b.numero - a.numero).forEach(s => {
+      const tab = document.createElement('div');
+      tab.className = 'semana-tab' + (s.numero !== DATA.semanaActual ? ' historial' : '') + (s.numero === semanaActiva ? ' activa' : '');
+      tab.textContent = `Semana ${s.numero}`;
+      tab.onclick = () => { semanaActiva = s.numero; renderNav(); renderGrid(); };
+      nav.appendChild(tab);
+    });
+  }
+
+  function renderGrid() {
+    const grid = document.getElementById('cursos-grid');
+    const badge = document.getElementById('historial-badge');
+    const label = document.getElementById('section-label');
+    const recBloque = document.getElementById('rec-bloque');
+    const recTexto = document.getElementById('rec-texto');
+    const cpeAviso = document.getElementById('cpe-aviso');
+    grid.innerHTML = '';
+
+    const semanaData = DATA.semanas.find(s => s.numero === semanaActiva);
+    const esActual = semanaActiva === DATA.semanaActual;
+
+    label.textContent = esActual ? 'Cursos activos' : `Historial — Semana ${semanaActiva}`;
+    badge.style.display = esActual ? 'none' : 'block';
+    cpeAviso.style.display = esActual ? 'block' : 'none';
+
+    if (semanaData?.recomendaciones) {
+      recTexto.innerHTML = formatRec(semanaData.recomendaciones);
+      recBloque.style.display = 'block';
+    } else {
+      recBloque.style.display = 'none';
+    }
+
+    if (!semanaData) { grid.innerHTML = '<div class="vacio">No hay contenido para esta semana.</div>'; return; }
+
+    DATA.cursos.forEach(curso => {
+      const contenido = semanaData.cursos[curso.id];
+      if (!contenido) return;
+      const color = curso.color;
+      const colorLight = hexToRgba(color, 0.09);
+      const card = document.createElement('div');
+      card.className = 'curso-card';
+      card.innerHTML = `
+        <div class="card-accent" style="background:${color};"></div>
+        <div class="card-header">
+          <div>
+            <div class="card-title">${curso.nombre}</div>
+            <div class="card-rc">RC: ${curso.rc}</div>
+          </div>
+          <div class="card-badges">
+            <div class="card-code" style="background:${colorLight};color:${color};">${curso.codigo}</div>
+            ${curso.esCPE ? '<div class="card-cpe-badge">Módulos 8 sem.</div>' : ''}
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-section">
+            <div class="semana-pill" style="background:${colorLight};color:${color};">Semana ${semanaActiva}</div>
+            <div class="card-section-label">Indicaciones generales</div>
+            ${contenido.indicaciones.map(ind => `
+              <div class="ind-item"><div class="ind-marker"></div><div>${linkify(ind)}</div></div>
+            `).join('')}
+          </div>
+          <div class="card-section">
+            <div class="card-section-label">Carpeta compartida</div>
+            <a class="carpeta-link" href="${curso.carpeta.url}" target="_blank">
+              <div class="carpeta-icon" style="background:${colorLight};">
+                <svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 5C0 3.89543 0.895431 3 2 3H8L10 5.5H18C19.1046 5.5 20 6.39543 20 7.5V14C20 15.1046 19.1046 16 18 16H2C0.895431 16 0 15.1046 0 14V5Z" fill="${color}" opacity="0.85"/>
+                </svg>
+              </div>
+              <span>${curso.carpeta.nombre}</span>
+              <span class="carpeta-arrow">→</span>
+            </a>
+          </div>
+        </div>`;
+      grid.appendChild(card);
+    });
+  }
+
+  function renderPage() {
+    const c = DATA.coordinacion;
+    document.title = `Coordinación ${c.ciclo} — ${c.universidad}`;
+    document.getElementById('ciclo-tag').textContent = `Ciclo ${c.ciclo}`;
+    const sd = DATA.semanas.find(s => s.numero === DATA.semanaActual);
+    document.getElementById('header-fecha').textContent = sd ? `Act. ${formatFecha(sd.fechaPublicacion)}` : '';
+    document.getElementById('hero-meta').textContent = `${c.unidad} · Coordinador: ${c.coordinador}`;
+    document.getElementById('semana-numero').textContent = DATA.semanaActual;
+    document.getElementById('footer-right').textContent = `Ciclo ${c.ciclo} · ${c.unidad}`;
+    semanaActiva = DATA.semanaActual;
+    renderNav();
+    renderGrid();
+  }
+
+  fetch('data-2026-2.json')
+    .then(r => r.json())
+    .then(data => { DATA = data; renderPage(); })
+    .catch(() => {
+      document.getElementById('cursos-grid').innerHTML = '<div class="vacio">No se pudo cargar el contenido.</div>';
+    });
+</script>
+</body>
+</html>
