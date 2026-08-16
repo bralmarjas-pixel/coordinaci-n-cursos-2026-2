@@ -79,10 +79,10 @@
   /* CPE AVISO */
   .cpe-aviso { background: var(--naranja-suave); border: 1px solid #FAD7A0; border-left: 4px solid var(--naranja); border-radius: 6px; padding: 12px 16px; font-size: 13px; color: #784212; margin-bottom: 28px; }
 
-  /* GRID */
+  /* GRID CURSOS */
   .cursos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
 
-  /* CARD */
+  /* CARD CURSO */
   .curso-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; }
   .curso-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.07); transform: translateY(-2px); }
   .card-accent { height: 4px; }
@@ -136,6 +136,21 @@
   .ps-rc-table tr:hover td { background: var(--bg); }
   .ps-curso-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; }
 
+  /* VIDEOS AUTOINSTRUCTIVOS */
+  .videos-intro { background: var(--azul-suave); border: 1px solid #D6EAF8; border-radius: 8px; padding: 16px 20px; margin-bottom: 28px; font-size: 13px; color: var(--azul); font-weight: 300; line-height: 1.7; }
+  .videos-intro strong { font-weight: 600; }
+  .videos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); gap: 24px; }
+  .video-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; }
+  .video-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.07); transform: translateY(-2px); }
+  .video-card-header { padding: 14px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 12px; }
+  .video-card-icon { width: 36px; height: 36px; background: var(--azul-suave); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .video-card-meta { flex: 1; }
+  .video-card-title { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--text); line-height: 1.35; }
+  .video-card-desc { font-size: 11px; color: var(--muted); margin-top: 2px; font-weight: 300; }
+  .video-card-tag { font-size: 9px; font-weight: 600; font-family: var(--font-display); letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; background: var(--azul-suave); color: var(--azul); flex-shrink: 0; }
+  .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+  .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
   /* FOOTER */
   footer { margin-top: 60px; padding: 22px 60px; border-top: 1px solid var(--border); background: var(--surface); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
   .footer-lema { font-family: var(--font-display); font-size: 13px; font-weight: 600; color: var(--azul); letter-spacing: 0.02em; }
@@ -145,6 +160,7 @@
     header, .hero-strip, main, footer, .semanas-nav, .nav-principal { padding-left: 20px; padding-right: 20px; }
     .hero-titulo { font-size: 22px; }
     .semana-numero { font-size: 32px; }
+    .videos-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -175,6 +191,7 @@
 <!-- NAV PRINCIPAL -->
 <div class="nav-principal">
   <div class="nav-tab activa" onclick="switchTab('semanas', this)">Semana actual</div>
+  <div class="nav-tab" onclick="switchTab('videos', this)">Videos autoinstructivos</div>
   <div class="nav-tab" onclick="switchTab('parasaber', this)">Para saber</div>
 </div>
 
@@ -182,6 +199,7 @@
 <nav class="semanas-nav" id="semanas-nav"></nav>
 
 <main>
+
   <!-- SECCIÓN SEMANAS -->
   <div id="sec-semanas" class="seccion visible">
     <div id="rec-bloque" class="rec-bloque" style="display:none;">
@@ -194,6 +212,37 @@
     <div class="section-label" id="section-label">Cursos activos</div>
     <div id="historial-badge" style="display:none;"><div class="historial-badge">Historial</div></div>
     <div class="cursos-grid" id="cursos-grid"></div>
+  </div>
+
+  <!-- SECCIÓN VIDEOS AUTOINSTRUCTIVOS -->
+  <div id="sec-videos" class="seccion">
+    <div class="section-label">Videos autoinstructivos</div>
+    <div class="videos-intro">
+      <strong>Recursos de apoyo para la gestión del curso.</strong> Estos videos te guían paso a paso en los procesos más frecuentes de Canvas y la plataforma institucional. Puedes pausarlos y seguirlos a tu ritmo.
+    </div>
+    <div class="videos-grid">
+
+      <!-- VIDEO 1: Grupos en Canvas -->
+      <div class="video-card">
+        <div class="video-card-header">
+          <div class="video-card-icon">👥</div>
+          <div class="video-card-meta">
+            <div class="video-card-title">Cómo formar grupos en Canvas</div>
+            <div class="video-card-desc">Configuración de grupos para trabajos en equipo — Semana 1</div>
+          </div>
+          <div class="video-card-tag">Canvas</div>
+        </div>
+        <div class="video-embed">
+          <iframe
+            src="https://scribehow.com/embed-preview/How_To_Manage_Group_Assignments_In_Educanet__LoNz_Jx2RFy86MzJHe2I3Q?as=video&size=flexible&voice=marin&scaleMode=contain"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <!-- PRÓXIMOS VIDEOS: duplicar el bloque .video-card para agregar más -->
+
+    </div>
   </div>
 
   <!-- SECCIÓN PARA SABER -->
@@ -210,18 +259,9 @@
           <div class="ps-card-title">Feriados del ciclo</div>
         </div>
         <div class="ps-card-body">
-          <div class="ps-feriado-item">
-            <div class="ps-feriado-fecha">30 ago</div>
-            <div class="ps-feriado-nombre">Santa Rosa de Lima</div>
-          </div>
-          <div class="ps-feriado-item">
-            <div class="ps-feriado-fecha">08 oct</div>
-            <div class="ps-feriado-nombre">Combate de Angamos</div>
-          </div>
-          <div class="ps-feriado-item">
-            <div class="ps-feriado-fecha">01 nov</div>
-            <div class="ps-feriado-nombre">Día de todos los Santos</div>
-          </div>
+          <div class="ps-feriado-item"><div class="ps-feriado-fecha">30 ago</div><div class="ps-feriado-nombre">Santa Rosa de Lima</div></div>
+          <div class="ps-feriado-item"><div class="ps-feriado-fecha">08 oct</div><div class="ps-feriado-nombre">Combate de Angamos</div></div>
+          <div class="ps-feriado-item"><div class="ps-feriado-fecha">01 nov</div><div class="ps-feriado-nombre">Día de todos los Santos</div></div>
           <div class="ps-nota">Las recuperaciones de feriados se desarrollan según protocolo GIE en plataforma Teams, según lineamiento institucional.</div>
         </div>
       </div>
@@ -280,24 +320,6 @@
 
     </div>
 
-    <!-- RECURSOS CANVAS -->
-    <div class="section-label">Recursos Canvas</div>
-    <div class="ps-card" style="margin-bottom: 32px;">
-      <div class="ps-card-header">
-        <div class="ps-card-icon">🎬</div>
-        <div class="ps-card-title">Cómo formar grupos en Canvas — Semana 1</div>
-      </div>
-      <div class="ps-card-body" style="padding: 0;">
-        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-          <iframe
-            src="https://scribehow.com/embed-preview/How_To_Manage_Group_Assignments_In_Educanet__LoNz_Jx2RFy86MzJHe2I3Q?as=video&size=flexible&voice=marin&scaleMode=contain"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-    </div>
-
     <!-- Responsables de curso -->
     <div class="section-label">Responsables de curso</div>
     <div class="ps-card" style="margin-bottom:0;">
@@ -322,6 +344,7 @@
     </div>
 
   </div>
+
 </main>
 
 <footer>
