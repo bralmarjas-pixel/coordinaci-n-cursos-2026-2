@@ -1,10 +1,8 @@
 {
   "coordinacion": {
-    "titulo": "Coordinación de Cursos",
-    "subtitulo": "Lengua · Redacción · Oratoria",
-    "unidad": "Cursos Básicos / Humanidades",
-    "universidad": "Universidad Científica del Sur",
     "ciclo": "2026-2",
+    "universidad": "Universidad Científica del Sur",
+    "unidad": "Cursos Básicos / Humanidades",
     "coordinador": "Bruno Alcántara Rojas"
   },
   "semanaActual": 1,
@@ -13,70 +11,108 @@
       "id": "lyc",
       "nombre": "Lengua y Comunicación",
       "codigo": "HUM-104",
-      "color": "#1E3A5F",
       "rc": "José Oruna",
+      "color": "#1E3A5F",
+      "esCPE": false,
       "carpeta": {
         "nombre": "Carpeta LyC",
-        "url": "https://n9.cl/98q5fv"
+        "url": "#"
       }
     },
     {
       "id": "lyc2",
       "nombre": "Lengua y Comunicación 2",
       "codigo": "HUM-105",
-      "color": "#7A2020",
       "rc": "Maritza Mestanza",
+      "color": "#7A2020",
+      "esCPE": false,
       "carpeta": {
         "nombre": "Carpeta LyC2",
-        "url": "https://n9.cl/luf94y"
+        "url": "#"
       }
     },
     {
       "id": "rg",
       "nombre": "Redacción General",
       "codigo": "HUM-101",
-      "color": "#5C3D6E",
       "rc": "Vanessa Vera",
+      "color": "#5C3D6E",
+      "esCPE": false,
       "carpeta": {
         "nombre": "Carpeta RG",
-        "url": "https://n9.cl/8s17w4"
+        "url": "#"
       }
     },
     {
       "id": "lyo",
       "nombre": "Lengua y Oratoria",
       "codigo": "HUM-106",
-      "color": "#1A1A1A",
       "rc": "José Mori",
+      "color": "#1A1A1A",
+      "esCPE": false,
       "carpeta": {
         "nombre": "Carpeta LyO",
-        "url": "https://n9.cl/8kmwh"
+        "url": "#"
       }
     },
     {
-      "id": "crc",
+      "id": "cpe",
       "nombre": "Comunicación y Redacción Científica",
       "codigo": "CPE",
-      "color": "#1A5276",
       "rc": "César Olivares",
+      "color": "#1A5276",
       "esCPE": true,
       "carpeta": {
-        "nombre": "Carpeta CRC",
-        "url": "https://n9.cl/wwqdu"
+        "nombre": "Carpeta CPE",
+        "url": "#"
       }
     }
   ],
   "semanas": [
     {
       "numero": 1,
-      "fechaPublicacion": "2026-08-17",
-      "recomendaciones": "Estimadas y estimados colegas, les doy la bienvenida al ciclo 2026-2 a nombre de nuestra institución. Nuestra principal labor es lograr la excelencia académica y ética en nuestros estudiantes. Por ello, los insto a cumplir con ello por medio de una comunicación efectiva, el uso de sus habilidades blandas y la responsabilidad ya reconocida en ustedes. Les deseo lo mejor para este nuevo semestre.\n\nRecuerden que para CPE — Comunicación y Redacción Científica, cada módulo concluye en 8 semanas.",
+      "fechaPublicacion": "2026-08-16",
+      "recomendaciones": "Para esta primera semana, tres recomendaciones concretas antes de entrar al aula:\n- Llegue temprano. Si su clase es a las 7:00 a.m., esté en la sede a las 6:30 a.m. El primer día de ciclo trae tráfico, papás acompañando a los estudiantes y muchas situaciones imprevistas.\n- Preséntese, presente el sílabo y use ese tiempo inicial para generar los grupos. Esos grupos deben trasladarse a Canvas desde esta misma semana. En la sección Videos autoinstructivos encontrará el tutorial paso a paso para hacerlo.\n- Llegue con buena disposición. Los estudiantes del primer ciclo suelen estar callados al inicio, pero son curiosos y receptivos. Trátelos con empatía: muchos están en plena transición a la vida universitaria y necesitan sentir que el aula es un espacio seguro.",
       "cursos": {
-        "lyc": { "indicaciones": ["Indicaciones de semana 1 próximamente."] },
-        "lyc2": { "indicaciones": ["Indicaciones de semana 1 próximamente."] },
-        "rg": { "indicaciones": ["Indicaciones de semana 1 próximamente."] },
-        "lyo": { "indicaciones": ["Indicaciones de semana 1 próximamente."] },
-        "crc": { "indicaciones": ["Módulo 1 — Semana 1. Indicaciones próximamente."] }
+        "lyc": {
+          "indicaciones": [
+            "Esta semana arranca con dos ejes que los estudiantes deben entender desde la primera sesión: el taller de lectura y el inicio de la monografía. Para el taller, cada estudiante elige individualmente una obra literaria, aunque se recomienda coordinar con el equipo el tipo de texto para mantener coherencia grupal. Esta semana se trabaja con El sueño del Pongo como lectura de ejemplo y motivación. El espacio para el taller es de aproximadamente 30 minutos dentro de la sesión, después de la fase Desarrollemos el tema y antes de Apliquemos lo aprendido. El producto del taller es grupal y acumulativo: la sumatoria de los cuatro talleres entra en la rúbrica de la EC1 de la semana 5.",
+            "En cuanto a la monografía, desde esta primera sesión los estudiantes eligen y delimitan su tema de investigación e identifican fuentes usando normas APA. El manual de monografía y la guía APA ya están publicados en Canvas. El desarrollo avanzará de forma gradual hasta la semana 15, cuando se presenta el producto final.",
+            "Es fundamental formar los grupos desde la semana 1, ya que tanto el cuaderno de trabajo como el taller los requieren. El cuaderno de trabajo se trabaja en físico — al menos un integrante por equipo debe traerlo impreso desde la semana 2 — y luego un integrante lo sube en PDF al aula virtual. Todas las evaluaciones en Canvas deben estar en modo oculto, excepto la EC1 de la semana 5, que es la única visible desde el inicio del ciclo.",
+            "Si el campus no tiene biblioteca operativa, los estudiantes pueden acudir a Cursos Básicos, donde hay libros disponibles para préstamo. Los retos gamificados y los videos asíncronos se realizan fuera del horario de clase: verifique que las fechas en Canvas estén actualizadas antes de comenzar."
+          ]
+        },
+        "lyc2": {
+          "indicaciones": [
+            "Lengua y Comunicación 2 es un curso de segundo ciclo cuyo primer gran producto es el debate argumentativo, que se evalúa en la EC1 de la semana 5. Desde esta primera sesión, el docente orienta a los estudiantes para que — organizados en equipos — elijan su tema de debate. En el cuaderno de trabajo de la sesión 1 se encuentra una lista de temas propuestos acordes a sus carreras, aunque los equipos pueden proponer otros. La dinámica es intergrupal: cada dos grupos coordinan entre sí para debatir el mismo tema con posturas contrarias. En caso de grupos impares, el último grupo se divide en dos mitades y debate entre sí.",
+            "El cuaderno de trabajo es el hilo conductor de las primeras cuatro semanas y se desarrolla en la fase Apliquemos lo aprendido. Al menos un integrante por equipo debe traerlo impreso a cada sesión. Es importante que los grupos se formen en Canvas desde la semana 1 para que las retroalimentaciones queden registradas de forma grupal desde el inicio del ciclo.",
+            "Es posible que algunos materiales en Canvas aún aparezcan con la denominación 2026-1, ya que el equipo está actualizando las cajas de contenido. Para acceder a los materiales actualizados de la semana 1 y 2, ingrese a la carpeta compartida disponible desde esta misma página web. Ante cualquier duda sobre el contenido del curso, comuníquese directamente con la RC Maritza Mestanza."
+          ]
+        },
+        "rg": {
+          "indicaciones": [
+            "El curso está dirigido a estudiantes que ya cuentan con base de Lengua y Comunicación o Lengua y Oratoria, por lo que se trabaja sobre esa base para consolidar la argumentación escrita. El primer módulo gira en torno a la reseña crítica cinematográfica: desde esta primera sesión, el docente explica qué es una categoría de análisis crítico, para qué sirve y cómo se aplica a la lectura de una película. Si los estudiantes comprenden esta categoría desde el inicio, observarán su película con mayor profundidad y distancia crítica. Se presentan entre cinco y seis opciones de películas, aunque los equipos también pueden proponer otra.",
+            "El ciclo se organiza en cuatro módulos: la reseña crítica ocupa el primero, y el ensayo argumentativo se desarrolla a lo largo de los módulos dos, tres y cuatro. El producto final del ciclo es una revista digital que integra ambos textos — reseña y ensayo — y se expone en la semana 15. Comunicar este recorrido desde la semana 1 ayuda a los estudiantes a entender la coherencia del curso.",
+            "El cuaderno de trabajo se trabaja de forma impresa en cada sesión, durante la fase Apliquemos lo aprendido. No se cuenta con laboratorios, así que al menos un integrante de cada equipo debe traerlo impreso. La evaluación diagnóstica se activa en la semana 2, preferiblemente el día anterior a la segunda sesión en horario nocturno, para que los estudiantes la completen de forma asíncrona.",
+            "Se recomienda elegir al delegado desde la semana 1 por cuartiles en Educanet — décimo, quinto o tercio superior. Los tickets suelen originarse cuando los estudiantes no reciben respuesta oportuna sobre sus calificaciones, por lo que es clave mantener los canales de comunicación activos y sustentar siempre las notas con la rúbrica correspondiente."
+          ]
+        },
+        "lyo": {
+          "indicaciones": [
+            "El curso se organiza en dos sesiones semanales: una de teoría y una de práctica, y ambas las dicta el mismo docente. La oralidad es el eje transversal de todo el ciclo: no es un componente más, sino el hilo que articula todos los contenidos. El propósito central es que los estudiantes de ciencias de la salud desarrollen competencias lingüísticas, gramaticales y pragmáticas aplicadas a contextos clínicos, aprendiendo a escribir y hablar con precisión técnica sin perder la claridad comunicativa frente al paciente.",
+            "En la semana 1 arranca el módulo 1, que se extiende hasta la semana 4. El contenido teórico se enfoca en fundamentos gramaticales y normativos del español aplicados a documentos clínicos. En la práctica, los estudiantes comienzan a trabajar con los cuadernos de trabajo de forma progresiva: cada semana suman elementos a lo que será su historia clínica — estructura, sintaxis, fundamentación y explicación. Un elemento distintivo de este módulo es la interculturalidad: los estudiantes incorporan la narrativa del paciente y cuestionan jerarquías que descartan saberes culturales, incluyendo diálogos en quechua que les servirán cuando realicen su SERUM.",
+            "Desde la semana 1 también se forman los grupos y se asignan los casos clínicos. Hay cinco casos disponibles y la dinámica funciona por pares de grupos: dos equipos eligen el mismo caso pero lo abordan desde especialidades médicas distintas — por ejemplo, uno desde cardiología y otro desde psiquiatría. Esta elección es fundamental porque en el módulo 3 ambos grupos protagonizarán una junta médica simulada donde deberán discutir y llegar a un diagnóstico consensuado.",
+            "El docente debe revisar los materiales en Canvas antes de clase, ya que además de los PPTs hay recursos adicionales recomendables para los estudiantes. La evaluación diagnóstica es asíncrona y se activa en la semana 2. Al retroalimentar, deje comentarios personales, sólidos y coherentes directamente en Canvas."
+          ]
+        },
+        "cpe": {
+          "indicaciones": [
+            "El curso es modular y tiene una duración de 8 semanas con dos sesiones por semana, lo que suma 16 sesiones en total. Está dirigido a estudiantes que trabajan, por lo que el docente aplica criterios de andragogía y mantiene flexibilidad ante tardanzas justificadas. El producto central que los estudiantes construirán a lo largo del módulo es un texto expositivo académico relacionado a su carrera profesional, con párrafos de desarrollo por subtemas, citas en APA 7 y, como anexo, su publicación en un blog académico o una página web gratuita como Wix.",
+            "El docente agrupa a los estudiantes por carrera; si no hay suficientes de una sola carrera, se fusionan carreras afines buscando un tema que las articule. La dinámica funciona como aula invertida: los trabajos de aplicación — que valen 2 puntos cada uno — se realizan en clase bajo supervisión directa, con fechas programadas en Canvas desde el inicio. Cada semana hay una guía de autoaprendizaje con dos trabajos asíncronos de 0,5 puntos cada uno que los estudiantes realizan fuera del horario de clase: es importante no omitirlos, ya que justifican las horas del curso modular.",
+            "Los momentos de evaluación del módulo 1 son los siguientes: la diagnóstica se aplica en la semana 1, la EC1 en la primera clase de la semana 3, el examen parcial en la segunda clase de la semana 4, la EC2 en la segunda clase de la semana 6, y la EC3 junto con el examen final se realizan en la semana 8 con el texto expositivo completo y el blog académico. El delegado se elige durante la primera clase, priorizando a estudiantes del décimo, quinto o tercio superior según Educanet.",
+            "Es fundamental verificar en Educanet si el curso asignado es presencial o virtual, ya que los horarios varían entre sesiones nocturnas de lunes a viernes y turnos de sábados o domingos. Si el curso es virtual, debe enviarse el enlace a las autoridades. A lo largo del ciclo se realizarán cuatro reuniones de coordinación para revisar los detalles específicos de cada evaluación."
+          ]
+        }
       }
     }
   ]
