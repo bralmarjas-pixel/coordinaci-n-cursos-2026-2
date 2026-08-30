@@ -7,7 +7,7 @@
     "ciclo": "2026-2",
     "coordinador": "Bruno Alcántara Rojas"
   },
-  "semanaActual": 2,
+  "semanaActual": 3,
   "cursos": [
     {
       "id": "lyc",
@@ -132,6 +132,52 @@
             "Trabajemos la primera versión de la historia clínica. En caso los estudiantes necesiten fuentes médicas, recomendamos el Manual Merck en su versión online. Pongamos énfasis en los aspectos normativos de la gramática del idioma y no en el contenido médico.",
             "Reprogramemos el feriado del 30 de agosto, coordinando previamente con los estudiantes.",
             "Procuremos, en la medida de lo posible, desarrollar el cuaderno de trabajo durante la clase."
+          ]
+        },
+        "crc": {
+          "indicaciones": [
+            "Indicaciones en breve. Consulta con tu Responsable de Curso."
+          ]
+        }
+      }
+    },
+    {
+      "numero": 3,
+      "fechaPublicacion": "2026-09-01",
+      "recomendaciones": "Estimados colegas, se acerca la evaluación del desempeño docente. Tomemos en cuenta el uso ético de la IA para agilizar el tiempo en los procesos de búsqueda de información para sus planes de trabajo u otros esquemas. Les solicito, además, su apoyo en la coordinación con los colegas tutores para los casos de los estudiantes que han desaprobado más de una vez los cursos (bicas, tricas y tetras). Buen inicio de semana 3.",
+      "cursos": {
+        "lyc": {
+          "indicaciones": [
+            "Informemos a los estudiantes que las notas de la evaluación diagnóstica están publicadas en el Portal Educanet.",
+            "Felicitemos al delegado y subdelegado de sus respectivas secciones e indiquémosles que su designación se encuentra registrada en el Portal Educanet.",
+            "Motivemos a los estudiantes para que desarrollen los retos gamificados.",
+            "Orientemos a los estudiantes en la elaboración de la estructura del plan de trabajo de la monografía.",
+            "Continuemos con el desarrollo de los talleres de lectura, pues ayudarán para el producto final que se entregará en la semana 5. La ficha de esta semana brindará especificaciones del caso."
+          ]
+        },
+        "lyc2": {
+          "indicaciones": [
+            "Iniciemos verificando que los estudiantes hayan realizado la actividad asíncrona indicada en la sesión 2 (semana 2): observar el video sobre las estrategias argumentativas.",
+            "Promovamos la participación de los estudiantes.",
+            "Durante 'Apliquemos lo aprendido', acompañemos a los estudiantes mediante preguntas sobre su propia escritura, en lugar de proporcionarles directamente las respuestas (¿Cuál es la postura que quieres defender? ¿Qué concepto necesitas definir? ¿Cuál es la causa principal del problema? ¿Las ideas están relacionadas de manera clara y coherente?).",
+            "Brindemos retroalimentación oportuna y orientemos a los estudiantes para que identifiquen y corrijan por sí mismos."
+          ]
+        },
+        "rg": {
+          "indicaciones": [
+            "Acompañemos a nuestros estudiantes en la redacción de los párrafos de desarrollo de la reseña.",
+            "Verifiquemos que la selección de citas sea relevante y aporte a la perspectiva crítica de la reseña.",
+            "Recordemos a los estudiantes que antes de la sesión 4 deben observar el video de clase invertida, a fin de lograr el aprendizaje esperado.",
+            "Solicitemos a nuestros estudiantes estar atentos a las publicaciones de la página web del curso (semana 1 del aula virtual)."
+          ]
+        },
+        "lyo": {
+          "indicaciones": [
+            "Los estudiantes deben haber leído el artículo de Quiñones-Laveriano (2025) sobre la interculturalidad en salud en el Perú para participar en la reflexión de la semana 3.",
+            "Deben haber corregido su primer esbozo de historia clínica de acuerdo con las observaciones del docente.",
+            "Leamos los manuales en quechua o los guiones de interrogación básica para orientar la actividad bilingüe.",
+            "Procuremos que los estudiantes integren el trasfondo cultural en el análisis de su caso.",
+            "Coordinemos con el delegado y subdelegado del curso."
           ]
         },
         "crc": {
