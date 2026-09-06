@@ -7,7 +7,7 @@
     "ciclo": "2026-2",
     "coordinador": "Bruno Alcántara Rojas"
   },
-  "semanaActual": 3,
+  "semanaActual": 4,
   "cursos": [
     {
       "id": "lyc",
@@ -190,6 +190,55 @@
             "Un integrante por grupo sube el archivo en la EC1.",
             "Empleemos la rúbrica y migremos las notas a Educanet en un plazo máximo de 48 horas. Si las clases son en días consecutivos, el plazo se acorta.",
             "No olvidemos realizar una retroalimentación asertiva a los estudiantes."
+          ]
+        }
+      }
+    },
+    {
+      "numero": 4,
+      "fechaPublicacion": "2026-09-08",
+      "recomendaciones": "Estimados colegas, estamos entrando a la semana 4 y cerrando el módulo 1. Es un momento importante porque nos acercamos a la EC1 en todos los cursos de lengua, y quiero que nuestros estudiantes lleguen bien preparados y tranquilos.\n\nSobre la evaluación de desempeño docente: para los colegas que dictan CPE, esta ya inició. Para el resto, se aproxima aproximadamente en la semana 5. Les pido que motiven a sus estudiantes a completar la encuesta, porque necesitamos llegar a un porcentaje considerable. Seamos muy atentos con los chicos en este sentido.\n\nSobre el uso de la inteligencia artificial: les recomiendo utilizarla de manera responsable. Puede ser un apoyo útil desde la fase de planificación —búsqueda de información, esquemas, organización de ideas— pero no durante la redacción. Recuerden que dentro de la evaluación docente hay preguntas que los estudiantes responden directamente sobre este tema. Para fuentes académicas confiables, recomiendo Google Académico y Semantic Scholar.\n\nFinalmente, el examen parcial y el final son evaluaciones escritas e individuales programadas por la universidad. Muchos estudiantes sienten ansiedad al respecto. Los invito a transmitirles tranquilidad: todo lo que trabajamos en clase los está preparando para ese momento. Orientémoslos con claridad para que lleguen sin preocupaciones innecesarias.",
+      "cursos": {
+        "lyc": {
+          "indicaciones": [
+            "Esta semana trabajamos el último taller de lectura del módulo 1. Leemos en clase y brindamos todas las pautas para el audiocuento.",
+            "El audiocuento es el producto final de los talleres de lectura: los estudiantes crean un cuento inspirado en las lecturas trabajadas y lo graban. Debe escucharse la voz de todos los integrantes del equipo.",
+            "Habilitemos en Canvas la EC1 (evaluación continua 1) y el entregable del audiocuento (ficha de entrega) en configuración grupal. Programemos la fecha límite de entrega un día antes de la semana 5.",
+            "Asegurémonos de que la rúbrica esté vinculada a la tarea activando 'Usar esta rúbrica para calificar las tareas' en Canvas.",
+            "Expliquemos a los estudiantes el formato del plan de trabajo monográfico que utilizarán en la EC1 de la semana 5. El formato se encuentra al pie del cuaderno de trabajo.",
+            "Al crear tareas adicionales en Canvas, no las asociemos con los grupos de evaluación diagnóstica, parcial o final, para evitar problemas al exportar notas.",
+            "Registremos calificaciones en Educanet dentro de las 48 horas. Brindemos retroalimentación en comentarios y completemos la rúbrica de competencias."
+          ]
+        },
+        "lyc2": {
+          "indicaciones": [
+            "Esta semana realizamos el ensayo general del debate: cada grupo expone uno de sus argumentos y se practica una contraargumentación breve entre equipos. No es el debate completo, sino la preparación final.",
+            "Los estudiantes deben concluir y corregir su guión del debate esta semana. Orientémoslos usando la plantilla del guión disponible en el aula virtual, adaptándola al número de integrantes de cada equipo.",
+            "La EC1 se concluye en la semana 5 con el debate académico oral. El guión sirve como base escrita; evaluamos principalmente la expresión oral y argumentativa.",
+            "Rúbrica de la EC1: semana 1 (planteamiento del tema y tesis, 2 pts), semana 2 (modelo TREC y normativa APA, 3 pts), semana 3 (análisis crítico argumentativo, 3 pts), semana 4 (contraargumentación y ensayo general, 3 pts), semana 5 (sustentación oral del debate, 9 pts). Nota: el cuaderno de trabajo semana 1 vale 2 puntos según la rúbrica, no 1.",
+            "Marquemos siempre las competencias en la rúbrica al calificar. Registremos asistencia y notas en Educanet dentro del plazo establecido.",
+            "Del módulo 2 (semanas 6 a 8): trabajaremos cohesión y coherencia — conectores, referentes, signos de puntuación y mayúsculas. Estos temas sirven de preparación para el examen parcial."
+          ]
+        },
+        "rg": {
+          "indicaciones": [
+            "Esta semana los estudiantes redactan el párrafo de introducción y el párrafo de cierre de la reseña, completando así el texto. La clase invertida previa (video en Canvas) les habrá dado la estructura; en clase complementamos, resolvemos dudas (máximo 15-20 minutos) y procedemos al taller.",
+            "Aprovechemos para brindar retroalimentación general de los párrafos de desarrollo redactados en la sesión 3.",
+            "Guiemos a los estudiantes en lo que será la EC1: entregan la reseña completa a través del aula virtual (1 o 2 días antes de la semana 5) y la sustentan oralmente en equipo durante la semana 5. Cada equipo tiene entre 10 y 15 minutos para exponer.",
+            "Habilitemos la EC1 en Canvas con la rúbrica correspondiente. La rúbrica contempla criterios de redacción, sustentación oral y respeto a las normas. Reforcemos con los estudiantes la importancia de cumplir plazos y seguir indicaciones.",
+            "Durante la sustentación, el estudiante debe manejar la información sin apoyos adicionales (sin celular). Cada docente puede adaptar las normas al perfil de su aula, siempre dentro de los lineamientos del curso.",
+            "Módulo 2 (semanas 6 y 7): trabajaremos el ensayo argumentativo — tema controversial, tesis y características. El módulo cierra con un borrador de la introducción del ensayo. El parcial es en la semana 8.",
+            "Migremos las calificaciones a Educanet a la brevedad posible tras la EC1."
+          ]
+        },
+        "lyo": {
+          "indicaciones": [
+            "Indicaciones en breve. Consulta con tu Responsable de Curso."
+          ]
+        },
+        "crc": {
+          "indicaciones": [
+            "Indicaciones en breve. Consulta con tu Responsable de Curso."
           ]
         }
       }
